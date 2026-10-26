@@ -1,0 +1,46 @@
+{
+  "numeric_features": [
+    "passengers_before_target",
+    "practical_capacity",
+    "minutes_since_previous_count",
+    "is_peak_period",
+    "earlier_occupancy_ratio",
+    "prediction_hour",
+    "prediction_minute",
+    "prediction_time_decimal"
+  ],
+  "categorical_features": [
+    "route_id",
+    "previous_stop",
+    "target_stop",
+    "day_of_week"
+  ],
+  "target_classes": [
+    "High",
+    "Low",
+    "Moderate"
+  ],
+  "training_samples": 300,
+  "test_samples": 100,
+  "training_trips": 75,
+  "test_trips": 25,
+  "dt_best_params": {
+    "classifier__criterion": "entropy",
+    "classifier__max_depth": 3,
+    "classifier__min_samples_leaf": 1,
+    "classifier__min_samples_split": 2
+  },
+  "knn_best_params": {
+    "classifier__metric": "manhattan",
+    "classifier__n_neighbors": 5,
+    "classifier__weights": "distance"
+  },
+  "dt_metrics": {
+    "accuracy": 0.87,
+    "macro_f1": 0.8608416068967953
+  },
+  "knn_metrics": {
+    "accuracy": 0.72,
+    "macro_f1": 0.6911132345914955
+  }
+}
